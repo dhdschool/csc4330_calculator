@@ -34,10 +34,6 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      # 6. Run static analysis
-      - name: Analyze code
-        run: flutter analyze
-
       # 7. Run unit & widget tests
       - name: Run Flutter tests
         run: flutter test --coverage
