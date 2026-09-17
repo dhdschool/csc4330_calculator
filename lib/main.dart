@@ -1,3 +1,4 @@
+import 'package:calculator/calculator.dart';
 import 'package:calculator/number_panel.dart';
 import 'package:calculator/operations_panel.dart';
 import 'package:flutter/material.dart';
@@ -106,21 +107,11 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: .center,
           children: [
-            Row(
-              mainAxisAlignment: .center,
-              spacing: 10, 
-              children: [
-                NumberPanel(),
-                OperationsPanel()
-            ])
+            Calculator()
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+    
     );
   }
 }

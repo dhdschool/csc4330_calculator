@@ -26,9 +26,13 @@ class OperationButton extends StatelessWidget {
 
 class OperationsPanel extends StatelessWidget {
   Operation? operation;
+  final OperationCallback callback;
+
+  OperationsPanel(this.callback);
 
   void _setOperation(Operation operation){
     this.operation = operation;
+    this.callback(operation);
   }
 
 

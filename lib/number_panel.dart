@@ -24,9 +24,13 @@ class NumberButton extends StatelessWidget{
 class NumberPanel extends StatelessWidget{
     int? selectedNumber;
     List<NumberButton> buttons = [];
+    final IntCallback callback;
+
+    NumberPanel(this.callback);
 
     _setNumber(int selectedNumber){
       this.selectedNumber = selectedNumber;
+      this.callback(selectedNumber);
     }
 
     @override
